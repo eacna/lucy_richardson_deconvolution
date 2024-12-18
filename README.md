@@ -1,6 +1,7 @@
 # Lucy-Richardson Deconvolution with Total Variation Regularization (Python, OpenCV)
 
 This project provides an implementation of the **Lucy-Richardson Deconvolution Algorithm** with **Total Variation (TV)** regularization. It can be used to deblur images, either in grayscale or in individual RGB channels. Additionally, the script allows users to specify the **Point Spread Function (PSF)** used in the deconvolution process, with options to choose a **Gaussian** or **Sinc** PSF and customize its size.
+This code implements equation 11 described in ```https://doi.org/10.1002/jemt.20294```
 
 ## Features
 
