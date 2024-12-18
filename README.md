@@ -26,7 +26,8 @@ To run this project, you'll need:
 You can install the necessary dependencies using `pip`:
 
 ```bash
-pip install opencv-python numpy scipy argparse matplotlib
+pip install numpy=1.26
+pip install opencv-python scipy argparse matplotlib tqdm
 ```
 
 # Files in the Project
