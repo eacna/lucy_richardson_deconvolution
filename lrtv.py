@@ -15,6 +15,7 @@ import numpy as np
 import warnings
 import os
 from scipy.ndimage import convolve
+from tqdm import tqdm
 
 # Suppress specific warnings related to invalid or divide errors
 np.seterr(divide='ignore', invalid='ignore')
@@ -65,7 +66,8 @@ def deconvRLTV(image, psf, lamb=0.002, epsilon=1e-4, maxiter=20000, lapse=2000, 
     sx = np.array([[1, 0, -1], [2, 0, -2], [1, 0, -1]])
     sy = np.transpose(sx)
 
-    while i <= maxiter:
+    for i in tqdm (range (maxiter), desc="Iteration: "):
+    # while i <= maxiter:
         gradx = cv2.filter2D(fn, -1, sx)
         grady = cv2.filter2D(fn, -1, sy)
 
@@ -108,10 +110,9 @@ def deconvRLTV(image, psf, lamb=0.002, epsilon=1e-4, maxiter=20000, lapse=2000, 
         fn = fn1
 
         # Save intermediate results at specified intervals
-        if (i + 1) % lapse == 0:
-            cv2.imwrite(f"iteration_{i+1}_{imagename}", fn)
+        if i % lapse == 0:
+            cv2.imwrite(f"{imagename}_iter_{i+1}.png", fn)
 
-        i += 1  # Increment iteration counter
 
     print("Deconvolution did not converge within the maximum number of iterations.")
     return fn  # Return final image
