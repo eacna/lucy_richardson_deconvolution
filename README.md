@@ -31,7 +31,7 @@ pip install opencv-python scipy argparse matplotlib tqdm
 ```
 
 # Files in the Project
-## 1. deconvRLTV.py
+## 1. lrtv.py
 This file contains the main implementation of the Lucy-Richardson Deconvolution Algorithm with Total Variation regularization. The function deconvRLTV() is used to process images with the deconvolution algorithm.
 
 ## 2. psfs.py
