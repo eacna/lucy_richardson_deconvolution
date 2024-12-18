@@ -17,10 +17,11 @@ To run this project, you'll need:
 - Python 3.x
 - Required Python libraries:
   - **OpenCV** (`cv2`)
-  - **NumPy**
+  - **NumPy=1.26**
   - **SciPy**
   - **argparse**
   - **matplotlib** (optional, for visualization)
+  - **tqdm**
 
 You can install the necessary dependencies using `pip`:
 
