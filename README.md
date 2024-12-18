@@ -61,10 +61,9 @@ W, SX, and SY are obligated parameters when --psf_type gaussian
 
 # Example 1: Deconvolution in Grayscale with a Gaussian PSF
 ```bash
-python main.py -i image.jpg --mode grayscale --psf_type gaussian --psf_size 363,43,37
+python main.py -i Examples/image.png --mode grayscale --psf_type sinc  --psf_size 350,45,45 --maxiter 500 --lapse 2 --lambda_var 0.0019
 ```
-
-This will process the image image.jpg in RGB mode with a Sinc PSF of size 363x30x25.
+Check Results in Examples directory
 
 ## 3. Check the Output
 After running the script, the output images will be saved in the same directory as the input image with the following naming conventions:
