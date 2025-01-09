@@ -38,7 +38,7 @@ This file contains the main implementation of the Lucy-Richardson Deconvolution 
 ## 2. psfs.py
 This file contains functions to generate different Point Spread Functions (PSFs), specifically Gaussian and Sinc. The function fspecial_gauss2D() creates a 2D Gaussian PSF, and fspecial_sinc2D() creates a 2D Sinc PSF.
 
-## 3. main.py (or any script you choose to run)
+## 3. main.py
 This file serves as the main entry point for the deconvolution process. It takes command-line arguments, loads the image, generates the appropriate PSF, and performs the deconvolution on the image.
 
 # How to Use
